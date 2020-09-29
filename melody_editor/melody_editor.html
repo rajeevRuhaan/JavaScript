@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Melody Editor</title>
+    <script src="Tone-muted.js"></script>
+    <script src="SimplePlayer.js"></script>
+    <script src="utilities.js"></script>
+    <link href="editor.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <div id="note-input-container">
+      Notes to edit: <input type="text" 
+      id="notes-to-edit" value="C4 D#4 G4">
+       <button id="edit-button">Edit</button>
+    </div>
+
+    <div id="editor-area">
+      <div class="note-container">
+        <button class="transpose-up">^</button><br>
+        <input type="text" class="note" size="2" value="C4">
+        <select class="note-length">
+          <option value="8">eighth note</option>
+          <option value="4">quarter note</option>
+          <option value="2">half note</option>
+          <option value="1">whole note</option>
+        </select><br>
+        <button class="transpose-down">v</button>
+      </div>
+      <div class="note-container">
+        <button class="transpose-up">^</button><br>
+        <input type="text" class="note" size="2" value="E4">
+        <select class="note-length">
+          <option value="8">eighth note</option>
+          <option value="4">quarter note</option>
+          <option value="2">half note</option>
+          <option value="1">whole note</option>
+        </select><br>
+        <button class="transpose-down">v</button>
+      </div>
+      <div class="note-container">
+        <button class="transpose-up">^</button><br>
+        <input type="text" class="note" size="2" value="G4">
+        <select class="note-length">
+          <option value="8">eighth note</option>
+          <option value="4">quarter note</option>
+          <option value="2">half note</option>
+          <option value="1">whole note</option>
+        </select><br>
+        <button class="transpose-down">v</button>
+      </div>
+    </div>
+
+    <div style="clear: both;">&nbsp;</div>
+    <div id="controls">
+      <button id="play-melody">Play</button>
+    </div>
+
+    <script src="melody_editor.js"></script>
+  </body>
+</html>
+
+
+

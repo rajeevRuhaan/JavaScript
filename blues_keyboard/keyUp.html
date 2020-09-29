@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Keyup event Example</title>
+  </head>
+  <body>
+        <p>Focus the IFrame first (e.g. by clicking in it), then try pressing some keys.</p>
+        <p id="log"></p>
+    <script>
+       
+       document.addEventListener('keyup', keyUpListener);
+      function keyUpListener(evt) {
+        console.log(evt.code);
+      }
+
+    </script>
+  </body>
+</html>

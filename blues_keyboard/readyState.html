@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>document.readyState Example</title>
+    <script>
+      document.onreadystatechange = function () {
+        if (document.readyState === 'complete') {
+          console.log("Ready!");
+          console.log(document.getElementById('some-div').innerText);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="some-div">Some text</div>
+  </body>
+</html>

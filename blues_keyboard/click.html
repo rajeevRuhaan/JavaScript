@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Clicking Example</title>
+  </head>
+  <body>
+    <button id="some-button">Click</button>
+    <script>
+      let someButton = document.getElementById('some-button');
+
+      function clickHandler() {
+        console.log('Button clicked');
+      }
+
+      someButton.addEventListener('click', clickHandler);
+    </script>
+  </body>
+</html>

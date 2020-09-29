@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Clicking Example</title>
+  </head>
+  <body>
+    <button id="some-button">Click</button>
+    <script>
+      let someButton = document.getElementById('some-button');
+
+      function clickHandler(evt) {
+        console.log('Button clicked');
+      }
+
+      function mouseEnterHandler(evt) {
+        console.log('Mouse moved on top of the button at ' + Date());
+      }
+
+      someButton.addEventListener('click', clickHandler);
+      someButton.addEventListener('mouseenter', mouseEnterHandler);
+    </script>
+  </body>
+</html>

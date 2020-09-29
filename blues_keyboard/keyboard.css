@@ -1,0 +1,19 @@
+body {
+	max-width: 900px;
+	margin: 1em auto;
+}
+
+#simple-keyboard {
+	padding: 2em;
+	background-color: #E4E4E1;
+	border: 1px solid gray;
+	width: 900px;
+}
+
+#simple-keyboard button {
+	font-size: 2em;
+	background-color: #EEFFEE;
+	color: #112211;
+	padding: 0 0.3em;
+	margin-right: 0.4em;
+}

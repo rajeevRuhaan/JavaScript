@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang='en'>
+ <head>
+  <title>document.readyState Example</title>
+  <script>
+   console.log(document.readyState);
+   console.log(document.getElementById('some-div'));
+  </script>
+ </head>
+ <body>
+  <div id='some-div'>Hi there!</div>
+  <script>
+   console.log(document.readyState);
+   console.log(document.getElementById('some-div').innerText);
+  </script>
+ </body>
+ <script>
+  console.log(document.readyState);
+  console.log(document.getElementById('some-div').innerText);
+  document.onreadystatechange = function (event) {
+      console.log(event.type);
+   if (document.readyState === 'complete') {
+    console.log("Ready!");
+    console.log(document.getElementById('some-div').innerText);
+  
+   }
+   
+  }
+ </script>
+</html>

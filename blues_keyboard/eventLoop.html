@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Keydown event Example</title>
+  </head>
+  <body>
+    <script>
+    let interval = setInterval(() => {
+	console.log('Are we there yet?');
+	console.log('\n');}, 2000);
+
+    setTimeout(() => {
+	clearInterval(interval);
+	console.log('Not yet!');}, 7000)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Keyup event Example</title>
+  </head>
+  <body>
+    
+
+<script>
+    let buttonsIds = ['C', 'C#', 'D', 'D#', 'E'];
+for(let i = 0; i < buttonsIds.length; i++) {
+    let noteButton = document.getElementById(buttonsIds[i]);
+    let innerText = buttonsIds[i];
+    noteButton.addEventListener('mouseenter', innerTextSet); 
+    
+    noteButton.addEventListener('mouseleave', innerTextRemoved);
+    
+}
+    function innerTextSet(e) {
+        console.log(innerText);
+    }
+    function innerTextRemoved(e) {
+        console.log('');
+    }
+
+    </script>
+  </body>
+</html>
+
+
+
+    
