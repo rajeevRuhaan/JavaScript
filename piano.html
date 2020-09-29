@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="Tone-muted.js"></script>
+	<style>
+		div.piano-container {
+			margin-left: auto;
+			margin-right: auto;
+			width: 60%;
+			text-align: center;
+			background-color: #FF5733;
+			border-radius: 10px;
+			border: 2px solid #37A237;
+			padding: 3em;
+			padding-top: 1em;
+		}
+
+		button {
+		  transition: all 0.3s ease;
+		  font-size: 400%;
+		}
+
+		button:active {
+			background-color: green;
+		}
+
+		#description p {
+			font-style: italic;
+			margin-top: 2em;
+			margin-bottom: -0.5em;
+		}
+	</style>
+</head>
+<body>
+	<div class="piano-container">
+		<h2>A Simple "Piano"</h2>
+		<p>Last note played:  <span id="lastNote">[none]</span></p>
+		<button onmousedown="playC()">C</button>
+		<button onmousedown="playD()">D</button>
+		<button onmousedown="playE()">E</button>
+		<button onmousedown="playF()">F</button>
+		<div id="description">
+			<p>This is a very simple "piano". When you click a button the corresponding note is played and the last note played is shown above in text.</p>
+			<p>You can add the paragraph either before or after the one that is already there, and it can contain any text you wish.</p>
+		</div>
+	</div>
+	<script>
+		let synth = new Tone.Synth().toMaster()
+
+		function showLastNote(note) {
+			let lastNoteElement = document.querySelector('#lastNote');
+			lastNoteElement.innerText = note;
+		}
+
+		function playC() {
+			synth.triggerAttackRelease('C4', '4n');
+			showLastNote('C4');
+		}
+
+		function playD() {
+			synth.triggerAttackRelease('D4', '4n');
+			showLastNote('D4');
+		}
+
+		function playE() {
+			synth.triggerAttackRelease('E4', '4n');
+			showLastNote('E4');
+		}
+
+		function playF() {
+			synth.triggerAttackRelease('F4', '4n');
+			showLastNote('F4');
+		}
+	</script>
+</body>
+</html>
