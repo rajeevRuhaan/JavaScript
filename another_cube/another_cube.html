@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>My first three.js app</title>
+    <style>
+      body { margin: 0; }
+      canvas { display: block; }
+    </style>
+  </head>
+  <body>
+    <script src="three.js"></script>
+    <script>
+      var scene = new THREE.Scene();
+      var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
+
+      var renderer = new THREE.WebGLRenderer();
+      renderer.setSize( window.innerWidth, window.innerHeight );
+      document.body.appendChild( renderer.domElement );
+
+      var geometry = new THREE.BoxGeometry();
+
+      // Somewhere in the following lines you should create a material that is not
+      // fully green. You should also create another mesh with that material and
+      // geometry that has been defined already.
+      // Then you should change the position.x of this new mesh to equal 2 and
+      // finally you should add it to the scene.
+      var myMaterial = new THREE.MeshBasicMaterial( {color : 0xFF0000});
+      var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+      var cube = new THREE.Mesh( geometry, material );
+      var cube1 = new THREE.Mesh( geometry, myMaterial );
+      cube1.position.set(2,0,0).normalize;
+      scene.add( cube );
+      scene.add( cube1,);
+
+      camera.position.z = 5;
+      //camera.position.x = 2;
+
+      var animate = function () {
+        requestAnimationFrame( animate );
+
+        cube.rotation.x += 0.01;
+        cube.rotation.y += 0.01;
+
+        cube1.rotation.x += 0.01;
+        cube1.rotation.y += 0.01;
+
+        renderer.render( scene, camera );
+
+      };
+      animate();
+    </script>
+    <!-- The rest of the document is here for grading, you can safely ignore it -->
+    <div id="grade" style="display: none;"></div>
+    <script>
+      let grade = document.getElementById('grade').innerText = JSON.stringify(scene.toJSON());
+    </script>
+
+  </body>
+</html>

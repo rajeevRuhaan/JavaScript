@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="graph.css">
+  <script src="d3.v5.min.js"></script>
+  <script src="main.js"></script>
+  <title>Greenhouse Pi Report</title>
+</head>
+<body>
+  <main role="main" class="container-fluid">
+    <h1>How is our greenhouse getting along?</h1>
+    <div class="alert alert-success">
+      Last temperature and humidity measure
+      <h4>
+        <span id="last-temperature"></span> ℃
+        <span id="last-humidity"></span> RH%
+        at time <span id="last-time"></span>
+      </h4>
+    </div>
+    <div id="day-graph">
+      <div class="half"></div>
+    </div>
+  </main>
+</body>
+</html>
