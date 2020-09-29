@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cookie Info</title>
+</head>
+<body>
+  <h2>Cookies information should be shown below</h2>
+  <ul id="cookie-info"></ul>
+
+  <script>
+    let cookieInfo = document.getElementById('cookie-info');
+    let cookies = document.cookie.split(';');
+
+    for (let i = 0; i < cookies.length; i++) {
+      let newCookieElement = document.createElement('li');
+      newCookieElement.innerText = cookies[i];
+      cookieInfo.appendChild(newCookieElement);
+    }
+  </script>
+</body>
+</html>
